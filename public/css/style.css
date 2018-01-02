@@ -1516,5 +1516,14 @@ figure {
   z-index: 9999;
   background: url(../images/hourglass.svg) center no-repeat #222222;
 }
+@media screen and (max-width: 768px) {
+  #header-chat {
+    display: none;
+  }
+  #about-chat {
+    display: none;
+  }
+
+}
 
 /*# sourceMappingURL=style.css.map */

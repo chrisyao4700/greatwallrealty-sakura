@@ -27,6 +27,7 @@ $(function () {
             clickNavWithTag('nav-management');
             break;
         case 'about':
+            clickNavWithTag('nav-about');
             break;
         default:
             break;

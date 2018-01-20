@@ -1,13 +1,13 @@
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/5a35b6fff4461b0b4ef89288/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5a35b6fff4461b0b4ef89288/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
     })();
 </script>
 
@@ -25,7 +25,8 @@
                         <p><a href="#" onclick="toggleOnlineChatting()">您身边的地产专家</a>
                         </p>
                         <p><a class="btn btn-primary btn-lg" href="tel://626-600-9128">欢迎致电</a></p>
-                        <p><a class="btn btn-primary btn-lg" id="header-chat" href="#" onclick="toggleOnlineChatting()">线上咨询</a></p>
+                        <p><a class="btn btn-primary btn-lg" id="header-chat" href="#" onclick="toggleOnlineChatting()">线上咨询</a>
+                        </p>
 
                     </div>
                 </div>
@@ -33,6 +34,8 @@
         </div>
     </div>
 </div>
+
+<div id="page-name" data-page="<%= page%>"></div>
 
 <header id="fh5co-header-section" class="sticky-banner">
     <div class="container">
@@ -42,17 +45,42 @@
             <!-- START #fh5co-menu-wrap -->
             <nav id="fh5co-menu-wrap" role="navigation">
                 <ul class="sf-menu" id="fh5co-primary-menu">
-                    <li id="nav-index" onclick="clickNavWithTag('nav-index')"><a href="#">主页</a></li>
-                    <li id="nav-purchase" onclick="clickNavWithTag('nav-purchase')"><a href="#">房屋买卖</a></li>
+                    <li id="nav-index" class="<%= (page === 'index') ? 'active' : '' %>"><a href="/">主页</a></li>
+                    <li id="nav-purchase" class="<%= (page === 'purchase') ? 'active' : '' %>"><a href="/purchase">房屋买卖</a>
+                    </li>
                     <!--<li id="nav-agent" onclick="clickNavWithTag('nav-agent')"><a href="#">房产经济人</a></li>-->
-                    <li id="nav-escrow" onclick="clickNavWithTag('nav-escrow')"><a href="#">Escrow</a></li>
-                    <li id="nav-loan" onclick="clickNavWithTag('nav-loan')"><a href="#">房屋贷款</a></li>
-                    <li id="nav-design" onclick="clickNavWithTag('nav-design')"><a href="#">设计&施工</a></li>
-                    <li id="nav-investment" onclick="clickNavWithTag('nav-investment')"><a href="#">土地投资</a></li>
-                    <li id="nav-management" onclick="clickNavWithTag('nav-management')"><a href="#">房产管理</a></li>
+                    <li id="nav-escrow" class="<%= (page === 'escrow') ? 'active' : '' %>"><a href="/escrow">Escrow</a></li>
+                    <li id="nav-loan" class="<%= (page === 'loan') ? 'active' : '' %>"><a href="/loan">房屋贷款</a></li>
+                    <li id="nav-design" class="<%= (page === 'design') ? 'active' : '' %>"><a href="/design">设计&施工</a></li>
+                    <li id="nav-investment" class="<%= (page === 'land') ? 'active' : '' %>"><a href="/land">土地投资</a></li>
+                    <li id="nav-management" class="<%= (page === 'management') ? 'active' : '' %>"><a
+                                href="/management">房产管理</a></li>
                     <li id="nav-about" onclick="clickNavWithTag('nav-about')"><a href="#">关于我们</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 </header>
+
+<!--<header id="fh5co-header-section" class="sticky-banner">-->
+<!--<div class="container">-->
+<!--<div class="nav-header">-->
+<!--<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>-->
+<!--<h1 id="fh5co-logo"><a href="#">长城地产</a></h1>-->
+<!--&lt;!&ndash; START #fh5co-menu-wrap &ndash;&gt;-->
+<!--<nav id="fh5co-menu-wrap" role="navigation">-->
+<!--<ul class="sf-menu" id="fh5co-primary-menu">-->
+<!--<li id="nav-index" onclick="clickNavWithTag('nav-index')"><a href="#">主页</a></li>-->
+<!--<li id="nav-purchase" onclick="clickNavWithTag('nav-purchase')"><a href="#">房屋买卖</a></li>-->
+<!--&lt;!&ndash;<li id="nav-agent" onclick="clickNavWithTag('nav-agent')"><a href="#">房产经济人</a></li>&ndash;&gt;-->
+<!--<li id="nav-escrow" onclick="clickNavWithTag('nav-escrow')"><a href="#">Escrow</a></li>-->
+<!--<li id="nav-loan" onclick="clickNavWithTag('nav-loan')"><a href="#">房屋贷款</a></li>-->
+<!--<li id="nav-design" onclick="clickNavWithTag('nav-design')"><a href="#">设计&施工</a></li>-->
+<!--<li id="nav-investment" onclick="clickNavWithTag('nav-investment')"><a href="#">土地投资</a></li>-->
+<!--<li id="nav-management" onclick="clickNavWithTag('nav-management')"><a href="#">房产管理</a></li>-->
+<!--<li id="nav-about" onclick="clickNavWithTag('nav-about')"><a href="#">关于我们</a></li>-->
+<!--</ul>-->
+<!--</nav>-->
+<!--</div>-->
+<!--</div>-->
+<!--</header>-->
